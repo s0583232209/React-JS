@@ -1,0 +1,98 @@
+.designRuller {
+  padding: 1.5rem;
+  background: rgba(17, 17, 17, 0.8);
+  border: 1px solid var(--neon-green);
+  border-radius: 12px;
+  box-shadow: var(--glow) var(--neon-green), inset var(--glow) var(--neon-blue);
+  display: flex;
+  flex-direction: column;
+  grid-area: 2/4/3/5
+}
+
+#changeState {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+#changeState button {
+  flex: 1;
+  padding: 0.8rem;
+  background: rgba(57, 255, 20, 0.1);
+  color: var(--neon-green);
+  border: 1px solid var(--neon-green);
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 2rem;
+}
+
+#changeState button.active {
+  background: var(--neon-green);
+  color: var(--dark-bg);
+  box-shadow: var(--glow) var(--neon-green);
+}
+
+.control-group {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 2px solid var(--neon-green);
+  border-radius: 10px;
+}
+
+.control-group label {
+  color: var(--neon-cyan);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.control-group input[type="color"] {
+  height: 40px;
+  background: transparent;
+  border: 1px solid var(--neon-cyan);
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.control-group select {
+  padding: 0.8rem;
+  background: rgba(0, 255, 255, 0.1);
+  color: var(--neon-cyan);
+  border: 1px solid var(--neon-cyan);
+  border-radius: 6px;
+}
+
+option {
+  background-color: black;
+  color: var(--neon-cyan);
+}
+
+.control-group input[type="range"] {
+  /* -webkit-appearance: none; */
+  height: 6px;
+  background: linear-gradient(to right, var(--neon-blue), var(--neon-cyan));
+  border-radius: 3px;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--neon-green);
+  border-radius: 50%;
+  box-shadow: var(--glow) var(--neon-green);
+  cursor: pointer;
+}
+
+.control-group span {
+  color: var(--neon-cyan);
+  font-weight: bold;
+}

@@ -1,0 +1,154 @@
+:root {
+  --neon-cyan: #00ffff;
+  --neon-pink: #ff00ff;
+  --neon-purple: #9d00ff;
+  --neon-green: #39ff14;
+  --neon-blue: #0066ff;
+  --dark-bg: #0a0a0a;
+  --card-bg: #111111;
+  --neon-red: #ff0040;
+  --glow: 0 0 8px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: ltr;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--dark-bg);
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding: 20px;
+  overflow-x: hidden;
+  direction: ltr;
+}
+
+.edditing {
+  width: 90vw;
+  height: 90vh;
+}
+
+.right-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flex-container:first-child {
+  flex: 1;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.flex-container:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flex-container:last-child .specialKeys {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.keyboard {
+  align-self: start;
+}
+
+.designRuller {
+  width: 300px;
+  height: 100vh;
+  flex-shrink: 0;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: var(--glow) var(--neon-cyan), inset var(--glow) var(--neon-blue);
+  }
+
+  100% {
+    box-shadow: var(--glow) var(--neon-green), inset var(--glow) var(--neon-cyan);
+  }
+}
+
+.text-areas {
+  width: 100%;
+  height: 28%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls-section {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.keyboard-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.log-out {
+  display: block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-blue));
+  border: 1px solid var(--neon-cyan);
+  border-radius: 8px;
+  color: var(--dark-bg);
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--glow) var(--neon-cyan);
+  z-index: 9999;
+}
+
+.log-out:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--neon-cyan), inset 0 0 10px rgba(0, 255, 255, 0.3);
+  background: linear-gradient(45deg, var(--neon-blue), var(--neon-cyan));
+}
+
+.log-out:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 8px var(--neon-cyan);
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-blue);
+  margin: 2rem 0;
+  animation: titleGlow 2s ease-in-out infinite alternate;
+  z-index: 200;
+}
+
+@keyframes titleGlow {
+  0% {
+    text-shadow: 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-blue);
+  }
+
+  100% {
+    text-shadow: 0 0 30px var(--neon-cyan), 0 0 60px var(--neon-blue), 0 0 80px var(--neon-purple);
+  }
+}

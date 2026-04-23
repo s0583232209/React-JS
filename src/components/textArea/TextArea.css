@@ -1,0 +1,198 @@
+:root {
+  --neon-cyan: #00ffff;
+  --neon-pink: #ff00ff;
+  --neon-purple: #9d00ff;
+  --neon-green: #39ff14;
+  --neon-red: #ff0040;
+  --dark-bg: #0a0a0a;
+  --card-bg: #111111;
+  --glow: 0 0 12px;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.space {
+  width: 0.5rem;
+}
+
+.text-display-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  width: 100%;
+  align-items: stretch;
+}
+
+.form-group {
+  flex: 1 1 400px;
+  min-width: 320px;
+  max-width: 100%;
+  position: relative;
+  background: var(--card-bg);
+  border: 2px solid var(--neon-cyan);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow:
+    var(--glow) var(--neon-cyan),
+    inset var(--glow) rgba(0, 255, 255, 0.2);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.form-group:hover {
+  box-shadow:
+    0 0 22px var(--neon-cyan),
+    0 0 45px rgba(0, 255, 255, 0.35),
+    inset var(--glow) rgba(0, 255, 255, 0.3);
+  transform: translateY(-5px);
+  z-index: 2;
+}
+
+.form-group:focus-within {
+  border-color: var(--neon-green);
+  box-shadow:
+    0 0 28px var(--neon-green),
+    0 0 55px rgba(57, 255, 20, 0.45),
+    inset 0 0 18px rgba(57, 255, 20, 0.25);
+}
+
+.form-group>button {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, var(--neon-red), #ff3366);
+  border: 2px solid var(--neon-red);
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  box-shadow: var(--glow) var(--neon-red);
+  z-index: 10;
+}
+
+.form-group>button:hover {
+  background: linear-gradient(135deg, #ff3366, var(--neon-red));
+  box-shadow: 0 0 25px var(--neon-red), 0 0 40px rgba(255, 0, 64, 0.6);
+  transform: scale(1.15) rotate(90deg);
+}
+
+.form-group>button:active {
+  transform: scale(1.05) rotate(90deg);
+}
+
+.form-group>label {
+  position: absolute;
+  top: -12px;
+  left: 1rem;
+  background: var(--card-bg);
+  padding: 0 0.8rem;
+  color: var(--neon-cyan);
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  text-shadow: 0 0 10px var(--neon-cyan);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.form-control {
+  background: rgba(17, 17, 17, 0.92);
+  border: 1px solid rgba(0, 255, 255, 0.35);
+  border-radius: 12px;
+  padding: 1rem;
+  min-height: 100px;
+  color: var(--neon-cyan);
+  font-family: 'Courier New', monospace;
+  font-size: 1.15rem;
+  line-height: 1.85;
+  resize: vertical;
+  overflow-y: auto;
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 0 18px rgba(0, 255, 255, 0.12);
+  transition: var(--transition);
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--neon-green);
+  box-shadow:
+    inset 0 0 22px rgba(57, 255, 20, 0.25),
+    0 0 18px var(--neon-green);
+}
+
+.form-control span {
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  user-select: none;
+}
+
+.form-control span:hover {
+  background: rgba(0, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 0 3px;
+  box-shadow: 0 0 10px var(--neon-cyan);
+  transform: scale(1.08);
+}
+
+.form-control span[style*="block"],
+.form-control span:empty {
+  display: block !important;
+  height: 1.85em;
+  min-height: 1.85em;
+}
+
+
+.blinking-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.5em;
+  background: var(--neon-cyan);
+  margin-left: 3px;
+  animation: blink 1s steps(2, start) infinite;
+  box-shadow: 0 0 12px var(--neon-cyan);
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .form-group {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group {
+    padding: 1rem;
+  }
+
+  .form-control {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .form-group>button {
+    width: 34px;
+    height: 34px;
+    font-size: 1.1rem;
+  }
+}

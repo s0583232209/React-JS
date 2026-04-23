@@ -1,0 +1,50 @@
+.saving-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(17, 17, 17, 0.95);
+  border: 1px solid var(--neon-green);
+  border-radius: 12px;
+  box-shadow: var(--glow) var(--neon-green);
+  z-index: 10000;
+  min-width: 400px;
+}
+
+.saving-form label {
+  color: var(--neon-green);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.saving-form input {
+  padding: 1rem;
+  background: rgba(57, 255, 20, 0.1);
+  border: 1px solid var(--neon-green);
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+}
+
+.saving-form button {
+  padding: 1rem;
+  background: linear-gradient(45deg, var(--neon-green), var(--neon-cyan));
+  color: var(--dark-bg);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--glow) var(--neon-green);
+  font-size: 1rem;
+}
+
+.saving-form button:hover {
+  transform: scale(1.05);
+  box-shadow: var(--glow) var(--neon-cyan), 0 0 15px var(--neon-green);
+}

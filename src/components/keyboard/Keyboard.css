@@ -1,0 +1,54 @@
+.keyboard {
+  width: 70vw;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0.6rem;
+  padding: 1.5rem;
+  background: rgba(17, 17, 17, 0.8);
+  border-radius: 14px;
+  box-shadow: inset var(--glow) var(--neon-green);
+}
+
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.key {
+  padding: 1rem;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.2rem;
+  background: rgba(0, 255, 255, 0.1);
+  color: white;
+  border: 1px solid var(--neon-cyan);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  box-shadow: var(--glow) var(--neon-cyan);
+}
+
+.key:hover {
+  background: rgba(0, 255, 255, 0.3);
+  box-shadow: var(--glow) var(--neon-cyan), 0 0 15px var(--neon-cyan);
+  transform: translateY(-2px);
+}
+
+.changeLanguage {
+  grid-column: span 10;
+  background: linear-gradient(45deg, var(--neon-green), var(--neon-blue));
+  color: white;
+  font-weight: bold;
+}
+
+.key[value=" "] {
+  grid-column: span 4;
+}

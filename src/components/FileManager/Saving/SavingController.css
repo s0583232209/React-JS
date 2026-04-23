@@ -1,0 +1,26 @@
+.saving-controller {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(17, 17, 17, 0.8);
+  border: 1px solid var(--neon-pink);
+  border-radius: 12px;
+  box-shadow: var(--glow) var(--neon-pink);
+}
+
+.saving-controller button {
+  flex: 1;
+  padding: 0.8rem;
+  background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink));
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.saving-controller button:hover {
+  background: linear-gradient(45deg, var(--neon-pink), var(--neon-purple));
+  box-shadow: var(--glow) var(--neon-pink);
+}

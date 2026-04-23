@@ -1,0 +1,52 @@
+.text-display-section {
+  grid-area: 1/1/2/4;
+  width: 90vw;
+}
+
+.text-areas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+#open-new {
+  height: max-content;
+  font-size: 1rem;
+  text-align: center;
+  position: relative;
+  display: block;
+}
+
+.text-areas>button {
+  background: linear-gradient(45deg, #00ffff, #0080ff);
+  border: none;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+  align-self: flex-start;
+}
+
+.text-areas>button:hover {
+  background: linear-gradient(45deg, #ff00ff, #ff0080);
+  box-shadow:
+    0 0 30px rgba(255, 0, 255, 0.7),
+    inset 0 0 20px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.text-areas>button:active {
+  transform: translateY(0);
+  box-shadow:
+    0 0 15px rgba(0, 255, 255, 0.8),
+    inset 0 0 15px rgba(255, 255, 255, 0.3);
+}

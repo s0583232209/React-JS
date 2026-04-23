@@ -1,0 +1,9 @@
+import { GetEmojiUrl } from '../components/emoji/BaseEmojiProps';
+import { DataEmoji } from '../dataUtils/DataTypes';
+import { EmojiStyle } from '../types/exposedTypes';
+import { Dimensions } from '../virtualization/virtualizationHelpers';
+export declare function preloadEmojiIfNeeded(emoji: undefined | DataEmoji, emojiStyles: EmojiStyle, scrollTop: number, clientHeight: number, topOffset: number, style: {
+    top: number;
+} | undefined, dimensions: Dimensions, getEmojiUrl: GetEmojiUrl): void;
+export declare function preloadEmoji(getEmojiUrl: GetEmojiUrl, emoji: undefined | DataEmoji, emojiStyle: EmojiStyle): void;
+export declare const preloadedEmojs: Set<string>;

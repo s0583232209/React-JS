@@ -1,0 +1,5 @@
+import { NullableElement } from './selectors';
+export declare function elementCountInRow(parent: NullableElement, element: NullableElement): number;
+export declare function firstVisibleElementInContainer(parent: NullableElement, elements: HTMLElement[], maxVisibilityDiffThreshold?: number): NullableElement;
+export declare function hasNextElementSibling(element: HTMLElement): boolean;
+export declare function getLabelHeight(parentNode: NullableElement): number;

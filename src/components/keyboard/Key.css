@@ -1,0 +1,27 @@
+.key {
+  min-width: 30px;
+  height: 30px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.key:hover {
+  background-color: #f8f9fa;
+  border-color: #007bff;
+  transform: translateY(-1px);
+}
+
+.key:active {
+  transform: translateY(0);
+  background-color: #007bff;
+  color: white;
+}

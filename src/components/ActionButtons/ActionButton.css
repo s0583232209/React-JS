@@ -1,0 +1,91 @@
+.action-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem 1.5rem !important;
+  margin: 0.3rem !important;
+  min-height: 44px !important;
+  background: linear-gradient(135deg, var(--neon-green), var(--neon-cyan)) !important;
+  border: 2px solid var(--neon-green) !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 0 15px var(--neon-green),
+    0 0 30px rgba(57, 255, 20, 0.3),
+    inset 0 0 10px rgba(57, 255, 20, 0.2) !important;
+
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
+  font-weight: bold !important;
+  font-size: 1rem !important;
+  color: #000 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.3) !important;
+
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+  max-height: 50px;
+}
+
+.action-button:hover {
+  transform: translateY(-4px) scale(1.05) !important;
+  box-shadow:
+    0 0 25px var(--neon-cyan),
+    0 0 50px rgba(0, 255, 255, 0.5),
+    inset 0 0 15px rgba(0, 255, 255, 0.3) !important;
+}
+
+.action-button:active {
+  transform: translateY(-2px) scale(1.02) !important;
+}
+
+.action-button::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 150% !important;
+  height: 150% !important;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.4) 0%, transparent 70%) !important;
+  border-radius: 12px !important;
+  transform: translate(-50%, -50%) scale(0) !important;
+  opacity: 0 !important;
+  animation: pulse 2s infinite !important;
+  z-index: -1 !important;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0;
+  }
+}
+
+
+.action-button {
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--neon-pink), #ff3366) !important;
+  border-color: var(--neon-pink) !important;
+  box-shadow:
+    0 0 15px var(--neon-pink),
+    0 0 30px rgba(255, 0, 64, 0.3),
+    inset 0 0 10px rgba(255, 0, 64, 0.2) !important;
+}
+
+.action-button::before {
+  background: radial-gradient(circle, rgba(255, 0, 64, 0.4) 0%, transparent 70%) !important;
+}
+
+.action-button:hover {
+  box-shadow:
+    0 0 25px var(--neon-pink),
+    0 0 50px rgba(255, 0, 64, 0.5),
+    inset 0 0 15px rgba(255, 0, 64, 0.3) !important;
+}

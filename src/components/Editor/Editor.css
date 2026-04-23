@@ -1,0 +1,51 @@
+.editor-container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 40% 10% 50%;
+  gap: 2rem;
+  max-width: 1600px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #0a0a0a;
+  min-height: 100vh;
+  margin-left: 0;
+}
+
+.text-display-section {
+  background: #111;
+  border: 1px solid var(--neon-cyan);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 0 12px var(--neon-cyan);
+  overflow-y: auto;
+  backdrop-filter: blur(4px);
+  grid-area: 1/2/2/3;
+  width: 100%;
+}
+
+.action-bar {
+  grid-area: 2/2/3/4;
+  width: 100%;
+}
+
+.keyboard {
+  width: 100%;
+  grid-area: 3/2/4/4;
+}
+
+.designRuller {
+  grid-area: 1/1/4/2;
+  height: 100vh;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .editor-container {
+    grid-template-columns: 1fr;
+  }
+
+  .controls-section {
+    order: -1;
+  }
+}
